@@ -1,0 +1,72 @@
+\documentclass[a4paper,11pt]{article}
+
+% Codificación e idioma
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Márgenes
+\usepackage[top=1.5cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+
+% Fuentes
+\usepackage{lmodern}
+
+% Gráficos (foto de perfil)
+\usepackage{graphicx}
+
+% Hiperenlaces
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% Listas
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
+
+% Secciones
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\MakeUppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% Sin sangría
+\usepackage{parskip}
+
+% -----------------------------------------------
+\begin{document}
+\pagestyle{empty}
+
+% === ENCABEZADO ===
+\begin{minipage}[t]{0.75\textwidth}
+  \vspace{0pt}
+  {\LARGE\textbf{Ismael Ares Fagil}} \\[4pt]
+  {\large DevOps Developer} \\[6pt]
+  \href{mailto:ismael.ares@pm.me}{ismael.ares@pm.me}
+  \quad\textbar\quad 722\,584\,195
+  \quad\textbar\quad A Coruña, España
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.20\textwidth}
+  \vspace{0pt}
+  \raggedleft
+  % Sustituir por: \includegraphics[width=2.5cm]{foto.jpg}
+  \fbox{\parbox[c][3cm][c]{2.5cm}{\centering\small FOTO}}
+\end{minipage}
+
+\vspace{10pt}
+
+% === PERFIL ===
+\section{Perfil}
+% TODO
+
+% === EXPERIENCIA ===
+\section{Experiencia}
+% TODO
+
+% === FORMACIÓN ===
+\section{Formación}
+% TODO
+
+% === HABILIDADES ===
+\section{Habilidades}
+% TODO
+
+\end{document}
