@@ -22,10 +22,13 @@
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
 
-% Secciones
-\usepackage{titlesec}
-\titleformat{\section}{\large\bfseries\MakeUppercase}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{6pt}
+% Secciones (sin titlesec — incompatible con TeX Live 2026)
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}%
+  \noindent{\large\bfseries\MakeUppercase{#1}}%
+  \vspace{2pt}\par\noindent\rule{\linewidth}{0.4pt}%
+  \vspace{6pt}%
+}
 
 % Sin sangría
 \usepackage{parskip}
@@ -57,22 +60,22 @@
 \vspace{10pt}
 
 % === PERFIL ===
-\section{Perfil}
+\cvsection{Perfil}
 DevOps Developer con más de un año de experiencia, especializado en automatización
 de pipelines CI/CD mediante GitHub Actions y scripting Bash, contenerización con
 Docker y gestión de entornos Kubernetes bajo filosofía GitOps. Experiencia en
 monitorización con Datadog. Orientado a seguir creciendo en DevOps e infraestructura.
 
 % === EXPERIENCIA ===
-\section{Experiencia}
+\cvsection{Experiencia}
 % TODO
 
 % === FORMACIÓN ===
-\section{Formación}
+\cvsection{Formación}
 % TODO
 
 % === HABILIDADES ===
-\section{Habilidades}
+\cvsection{Habilidades}
 % TODO
 
 \end{document}
