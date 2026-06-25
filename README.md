@@ -2,7 +2,7 @@
 
 Latest version: [ismael-ares-netex.github.io/cv](https://ismael-ares-netex.github.io/cv/)
 
-The PDF is automatically compiled and deployed on every push to `main`.
+The PDF is automatically compiled and deployed to GitHub Pages on every push to `main` that modifies `cv.tex`.
 
 ## Compile manually
 
