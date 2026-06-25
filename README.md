@@ -6,17 +6,16 @@ The PDF is automatically compiled and deployed to GitHub Pages on every push to 
 
 ## Compile manually
 
-Requires a LaTeX distribution (TeX Live, MiKTeX, MacTeX...).
+**With Docker** (recommended, no local LaTeX required):
+
+```bash
+make docker
+```
+
+**With a local LaTeX distribution** (TeX Live, MiKTeX, MacTeX...):
 
 ```bash
 make
-```
-
-Or directly:
-
-```bash
-pdflatex cv.tex
-pdflatex cv.tex  # second run to resolve references
 ```
 
 Output: `cv.pdf`
