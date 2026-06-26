@@ -1,6 +1,6 @@
 # CV — Ismael Ares Fagil
 
-Latest version: [ismael-ares-netex.github.io/cv](https://ismael-ares-netex.github.io/cv/)
+Latest version: [ismael-ares.github.io/cv](https://ismael-ares.github.io/cv/)
 
 The PDF is automatically compiled and deployed to GitHub Pages on every push to `main` that modifies `cv.tex`.
 
