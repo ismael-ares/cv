@@ -99,6 +99,66 @@ like `'25`. Make sure date ranges are unambiguous so the ATS can compute tenure.
 Export as a **PDF with selectable text** (not a scanned image / not flattened), so OCR isn't
 required. Avoid graphics-based skill meters.
 
+## Scoring rubric (out of 100)
+
+When asked to score the CV, rate each category and sum the points. Each category's score is a
+fraction of its weight based on how well the CV meets that standard.
+
+| Category | Weight |
+| --- | --- |
+| Quantified achievements / XYZ formula | 25 |
+| Keyword coverage & relevance | 20 |
+| Results over tasks | 10 |
+| Structure & standard headings | 10 |
+| Single-column / parsing safety | 10 |
+| Certifications presentation | 5 |
+| Skill prioritization | 5 |
+| Date formatting | 5 |
+| Contact & links | 5 |
+| Export hygiene / single page | 5 |
+| **Total** | **100** |
+
+Rating bands: **90–100 Excellent · 75–89 Good · 60–74 Fair · <60 Needs work**.
+
+## Report mode
+
+When invoked as `/cv-ats report` (or asked for a "report"), do **not** modify `cv.tex`. Instead,
+write the full report to **`cv-ats-report.md`** in the repo root using this exact structure:
+
+```markdown
+# CV ATS Report
+
+_<one-line diagnosis>_
+
+## Overall score: NN/100 — <rating label>
+
+## Score breakdown
+
+| Category | Weight | Score | Note |
+| --- | --- | --- | --- |
+| Quantified achievements / XYZ formula | 25 | NN | ... |
+| ... | ... | ... | ... |
+| **Total** | **100** | **NN** | |
+
+## Findings
+
+### 🔴 HIGH
+- **<title>** (`cv.tex:<line>`) — <issue>. Rewrite: <concrete suggestion>
+
+### 🟡 MEDIUM
+- ...
+
+### 🟢 LOW
+- ...
+
+## Already compliant ✅
+- <item> — <why it's fine>
+```
+
+Keep findings concrete and tied to `cv.tex` line numbers. Skip categories that are fully
+compliant from the findings list (note them under "Already compliant" instead). This is the
+format the CI workflow publishes to the GitHub Actions step summary.
+
 ## Notes on this repo's CV (`cv.tex`)
 
 Already compliant (don't re-flag unless changed):
