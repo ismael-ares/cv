@@ -63,26 +63,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
-  report:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Generate ATS report
-        uses: anthropics/claude-code-action@v1
-        with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          prompt: |
-            Run the /cv-ats skill in report mode: audit cv.tex, score it out of 100,
-            and write the full markdown report to cv-ats-report.md in the repo root.
-            Do not modify cv.tex.
-          claude_args: |
-            --model claude-sonnet-4-6
-            --max-turns 20
-            --allowedTools Read,Write,Glob,Skill
-
-      - name: Publish report to step summary
-        run: cat cv-ats-report.md >> "$GITHUB_STEP_SUMMARY"
