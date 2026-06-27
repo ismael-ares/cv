@@ -1,16 +1,17 @@
 MAIN = cv
+NAME = Ismael_Ares_Fagil_CV
 DOCKER_IMAGE = ghcr.io/xu-cheng/texlive-full:latest
 
 .PHONY: all docker clean
 
-all: $(MAIN).pdf
+all: $(NAME).pdf
 
-$(MAIN).pdf: $(MAIN).tex
-	pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
+$(NAME).pdf: $(MAIN).tex
+	pdflatex -jobname=$(NAME) $(MAIN).tex
+	pdflatex -jobname=$(NAME) $(MAIN).tex
 
 docker:
-	docker run --rm -v $(PWD):/workspace -w /workspace $(DOCKER_IMAGE) latexmk -pdf $(MAIN).tex
+	docker run --rm -v $(PWD):/workspace -w /workspace $(DOCKER_IMAGE) latexmk -pdf -jobname=$(NAME) $(MAIN).tex
 
 clean:
-	rm -f *.aux *.log *.out *.synctex.gz *.fls *.fdb_latexmk $(MAIN).pdf
+	rm -f *.aux *.log *.out *.synctex.gz *.fls *.fdb_latexmk $(NAME).pdf
