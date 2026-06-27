@@ -56,7 +56,8 @@ make docker
 make
 ```
 
-Output: `cv.pdf`
+Output: `Ismael_Ares_Fagil_CV.pdf` (named with the recruiter-friendly
+`FirstName_LastName_CV.pdf` convention).
 
 ```bash
 make clean  # remove build artifacts

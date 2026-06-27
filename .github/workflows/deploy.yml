@@ -29,17 +29,17 @@ jobs:
       - name: Prepare deploy directory
         run: |
           mkdir -p _site
-          cp cv.pdf _site/cv.pdf
+          cp cv.pdf _site/Ismael_Ares_Fagil_CV.pdf
           cat > _site/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="es">
           <head>
             <meta charset="UTF-8">
-            <meta http-equiv="refresh" content="0; url=cv.pdf">
+            <meta http-equiv="refresh" content="0; url=Ismael_Ares_Fagil_CV.pdf">
             <title>CV — Ismael Ares Fagil</title>
           </head>
           <body>
-            <a href="cv.pdf">Open CV</a>
+            <a href="Ismael_Ares_Fagil_CV.pdf">Open CV</a>
           </body>
           </html>
           EOF

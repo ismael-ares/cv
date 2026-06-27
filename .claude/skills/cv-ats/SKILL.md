@@ -97,7 +97,10 @@ like `'25`. Make sure date ranges are unambiguous so the ATS can compute tenure.
 
 ### LOW — Export hygiene
 Export as a **PDF with selectable text** (not a scanned image / not flattened), so OCR isn't
-required. Avoid graphics-based skill meters.
+required. Avoid graphics-based skill meters. Name the file with the
+**`FirstName_LastName_CV.pdf`** convention (e.g. `Ismael_Ares_Fagil_CV.pdf`) — recruiters and
+ATS often key on the filename, so a clear, indexable name reads as professional and is easy to
+find in a stack of applications.
 
 ## Scoring rubric (out of 100)
 
